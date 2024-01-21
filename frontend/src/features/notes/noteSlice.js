@@ -11,11 +11,11 @@ const initialState = {
 
 // Get Ticket Notes
 export const getNotes = createAsyncThunk(
-  'tickets/getAll',
+  'notes/getAll',
   async (ticketId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
-      return await noteService.getTicket(ticketId, token);
+      return await noteService.getNotes(ticketId, token);
     } catch (error) {
       const message =
         (error.response &&
