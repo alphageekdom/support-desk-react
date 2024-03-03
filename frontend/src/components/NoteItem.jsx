@@ -11,9 +11,9 @@ const NoteItem = ({ note }) => {
         color: note.isStaff ? '#FFFFFF' : '#000000',
       }}
     >
-      <h4>
+      <h1>
         Note from {note.isStaff ? <span>Staff</span> : <span>{user.name}</span>}
-      </h4>
+      </h1>
       <p>{note.text}</p>
       <div className='note-date'>
         {new Date(note.createdAt).toLocaleString('en-US')}
